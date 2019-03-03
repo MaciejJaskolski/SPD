@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1551518517 source:/home/maciek/Desktop/SPD/carlier/carlier/Carlier.cpp
+	"Carlier.h"
+	<climits>
+
+1551517564 /home/maciek/Desktop/SPD/carlier/carlier/Carlier.h
+	<vector>
+	"Zadanie.h"
+	"Schrage.h"
+	"SchrageP.h"
+
+1551370402 /home/maciek/Desktop/SPD/carlier/carlier/Zadanie.h
+	<iostream>
+
+1551517912 /home/maciek/Desktop/SPD/carlier/carlier/Schrage.h
+
+1551517908 /home/maciek/Desktop/SPD/carlier/carlier/SchrageP.h
+
+1551518563 source:/home/maciek/Desktop/SPD/carlier/carlier/main.cpp
+	<iostream>
+	<fstream>
+	"Carlier.h"
+
+1551517471 source:/home/maciek/Desktop/SPD/carlier/carlier/Schrage.cpp
+
+1551517512 source:/home/maciek/Desktop/SPD/carlier/carlier/SchrageP.cpp
+
+1551370402 source:/home/maciek/Desktop/SPD/carlier/carlier/Zadanie.cpp
+	"Zadanie.h"
+

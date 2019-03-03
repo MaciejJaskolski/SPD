@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Carlier" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Carlier" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Carlier" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../carlier/Carlier.cpp" />
+		<Unit filename="../carlier/Carlier.h" />
+		<Unit filename="../carlier/SCHRAGE1.DAT" />
+		<Unit filename="../carlier/SCHRAGE2.DAT" />
+		<Unit filename="../carlier/SCHRAGE6.DAT" />
+		<Unit filename="../carlier/Schrage.cpp" />
+		<Unit filename="../carlier/Schrage.h" />
+		<Unit filename="../carlier/SchrageP.cpp" />
+		<Unit filename="../carlier/SchrageP.h" />
+		<Unit filename="../carlier/Zadanie.cpp" />
+		<Unit filename="../carlier/Zadanie.h" />
+		<Unit filename="../carlier/main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
