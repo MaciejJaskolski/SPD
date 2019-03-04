@@ -9,3 +9,5 @@ Repozytorium zawiera algorytmy szeregowania zadan:
 * schrage z podziałami
 * carlier
 
+http://new.zsd.iiar.pwr.wroc.pl/educ.php?lid=118
+
