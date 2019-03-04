@@ -1,13 +1,13 @@
 /**
-RPQ
+* JACKSON
 */
 
 #include<iostream>
 #include<fstream>
 #include<vector>
+//#include<conio.h>
 #include<string.h>
 #include<algorithm>
-#include<climits>
 
 using namespace std;
 
@@ -15,7 +15,6 @@ struct Maszyna {
 	int liczbaZadan;
 	vector<int> czasTrwania;
 	vector<int> czasRozpoczecia;
-	vector<int> czasZakonczenia;
 };
 
 Maszyna maszyna;
@@ -36,8 +35,6 @@ void WczytajDaneZPliku(string nazwaPliku) {
 		maszyna.czasRozpoczecia.push_back(tmp);
 		stream >> tmp;
 		maszyna.czasTrwania.push_back(tmp);
-		stream >> tmp;
-		maszyna.czasZakonczenia.push_back(tmp);
 	}
 }
 void Pokaz()
@@ -46,8 +43,6 @@ void Pokaz()
 	{
 		cout<< "Czas rozpoczecia: " << maszyna.czasRozpoczecia[i] << endl;
 		cout << "Czas trwania: " << maszyna.czasTrwania[i] << endl;
-		cout << "Czas zakonczenia: " << maszyna.czasZakonczenia[i] << endl;
-		cout << "---\n";
 	}
 }
 void Swap(int &a,int &b) 
@@ -65,28 +60,32 @@ void Posortuj()
 			{
 				Swap(maszyna.czasRozpoczecia[i], maszyna.czasRozpoczecia[j]);
 				Swap(maszyna.czasTrwania[i], maszyna.czasTrwania[j]);
-				Swap(maszyna.czasZakonczenia[i], maszyna.czasZakonczenia[j]);
 			}
 
 	}
 }
-
+void print(int x) {
+	//cout << x << endl;
+}
 int Cmax()
-{	
-	Posortuj();
-	int cmax = 0;
-	int m = 0;
-	for(int i =0;i<maszyna.liczbaZadan;i++) {
-		m = Max(m, maszyna.czasRozpoczecia[i]) + maszyna.czasTrwania[i];
-		cmax = Max(cmax, m + maszyna.czasZakonczenia[i]);
+{
+	//Pokaz();
+	vector<int> start;
+	start.push_back(maszyna.czasRozpoczecia[0]);	
+	for (int i = 1; i < maszyna.liczbaZadan; i++)
+	{
+		start.push_back(Max(start.back() + maszyna.czasTrwania[i-1],
+						    maszyna.czasRozpoczecia[i]));
 	}
-	return cmax;
+	for_each(start.begin(), start.end(), print);
+	return start.back() + maszyna.czasTrwania[maszyna.liczbaZadan-1];
 }
 
 int main()
 {
 	WczytajDaneZPliku("JACK1.DAT");
-	Pokaz();
+	Posortuj();
 	cout << "CMAX: " << Cmax() << endl;
+	//_getch();
 	return 0;
 }
